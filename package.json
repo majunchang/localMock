@@ -1,0 +1,23 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mock": "node server.js",
+    "dev": "npm run mock ",
+    "start": "npm run dev ",
+    "gulp": "gulp mock "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "json-server": "^0.14.0",
+    "mockjs": "^1.0.1-beta3"
+  }
+}
