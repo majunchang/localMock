@@ -1,8 +1,14 @@
-var Mock = require('mockjs')
+// var Mock = require('mockjs')
+import Mock from 'mockjs'
+var obj = {
+  name: '11',
+  age: 22
+}
+
 let test = {
   getme: {
-    name: 'xiaoming',
-    age: 19,
+    name: 'xiaohong',
+    age: 21,
     gender: '男',
     xuexi: 'cha11'
   },

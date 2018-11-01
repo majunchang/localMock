@@ -2,7 +2,10 @@ const path = require('path')
 const gulp = require('gulp')
 const nodemon = require('gulp-nodemon')
 const browserSync = require('browser-sync').create()
+// 配置需要监听的路径
 const server = path.resolve(__dirname, 'mock')
+const api = path.resolve(__dirname, 'api')
+const router = path.resolve(__dirname, 'router')
 
 // browser-sync配置，配置里启动nodemon任务
 gulp.task('browser-sync', ['nodemon'], function () {
@@ -14,7 +17,7 @@ gulp.task('browser-sync', ['nodemon'], function () {
 
 // browser-sync 监听文件
 gulp.task('mock', ['browser-sync'], function () {
-  gulp.watch(['./mock/db.js', './mock/**', './router/**', './api/**', './api/**.js'], ['bs-delay'])
+  gulp.watch(['./mock/db.js', './mock/**', './router/**', './api/test/**.js'], ['bs-delay'])
 })
 
 // 延时刷新
@@ -34,7 +37,9 @@ gulp.task('nodemon', function (cb) {
     ext: 'js',
     // 监听的路径
     watch: [
-      server
+      server,
+      api,
+      router
     ]
   })
   stream.on('start', function () {

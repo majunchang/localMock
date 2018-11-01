@@ -12,7 +12,8 @@ server.use(middlewares)
 // 将 POST 请求转为 GET
 server.use((request, res, next) => {
   console.log(request.method)
-  // request.method = 'GET'
+  //  将所有的请求 都变为post形式
+  request.method = 'GET'
   next()
 })
 
@@ -27,6 +28,12 @@ router.render = (req, res) => {
     errno: 0
   })
 }
+var obj = {
+  name: '11',
+  age: 22
+}
+console.log(obj)
+console.log('1234')
 
 server.listen(port, () => {
   console.log('open mock server at localhost:' + port)

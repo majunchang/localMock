@@ -1,0 +1,5 @@
+require('babel-register')
+require('babel-polyfill')
+// require('core-js')
+require('babel-preset-env')
+require('./server')

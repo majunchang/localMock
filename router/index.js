@@ -1,7 +1,8 @@
-const test = require('./test/test')
+// const test = require('./test/test')
+import test from './test/test'
 
-module.exports = {
-  ...test,
+export default {
+  test,
   '/comment/get.action': '/getComment',
   '/comment/add.action': '/addComment'
 }
