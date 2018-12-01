@@ -1,7 +1,7 @@
 const jsonServer = require('json-server')
 const db = require('./mock/db')
 const routes = require('./router')
-const port = 8080
+const port = 8000
 
 const server = jsonServer.create()
 const router = jsonServer.router(db)
@@ -19,21 +19,6 @@ server.use((request, res, next) => {
 
 server.use(rewriter) // 注意：rewriter 的设置一定要在 router 设置之前
 server.use(router)
-
-router.render = (req, res) => {
-  res.jsonp({
-    data: res.locals.data,
-    status: 0,
-    msg: '',
-    errno: 0
-  })
-}
-var obj = {
-  name: '11',
-  age: 22
-}
-console.log(obj)
-console.log('1234')
 
 server.listen(port, () => {
   console.log('open mock server at localhost:' + port)

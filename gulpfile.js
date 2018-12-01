@@ -32,7 +32,7 @@ gulp.task('nodemon', function (cb) {
   // 设个变量来防止重复重启
   var started = false
   var stream = nodemon({
-    script: './server.js',
+    script: './main.js',
     // 监听文件的后缀
     ext: 'js',
     // 监听的路径
