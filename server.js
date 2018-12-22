@@ -11,7 +11,6 @@ const rewriter = jsonServer.rewriter(routes)
 server.use(middlewares)
 // 将 POST 请求转为 GET
 server.use((request, res, next) => {
-  console.log(request.method)
   //  将所有的请求 都变为post形式
   request.method = 'GET'
   next()

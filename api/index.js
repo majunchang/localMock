@@ -1,7 +1,7 @@
 const test = require('./test/test.js')
-const myblock = require('./test/myblock')
+import projectOne from './project/projectOne'
 
 module.exports = {
   ...test,
-  myblock
+  ...projectOne
 }

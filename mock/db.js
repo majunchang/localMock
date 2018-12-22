@@ -1,7 +1,7 @@
 // var Mock = require('mockjs')
 import Mock from 'mockjs'
 var api = require('../api')
-console.log(api)
+
 module.exports = {
   ...api,
   getComment: Mock.mock({
